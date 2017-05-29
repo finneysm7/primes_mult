@@ -36,6 +36,7 @@ def create_mult_table(num):
         row = '\t'.join(map(str, (i*q for q in primes)))
         rows.append('{}\t{}'.format(i,row))
     print(header +'\n' + '\n'.join(rows))
+    return [header] + rows
 
 if __name__ == "__main__":
     create_mult_table(10)
