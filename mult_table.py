@@ -1,5 +1,6 @@
 
 def find_primes(num):
+    """ finds the number of primes passed in """
     """ square the number to use a large limit with seive, works for small solutions"""
     limit = num * num
     if num == 1:
@@ -16,6 +17,7 @@ def find_primes(num):
     return result_arr
 
 def seive_of_eratosthenes(limit):
+    """ Use seive of Eratosthenes to find primes """
     primes = [True for i in xrange(limit + 1)]
     check = 2
     while check * check <= limit:
@@ -28,6 +30,7 @@ def seive_of_eratosthenes(limit):
     return primes
 
 def create_mult_table(num):
+    """ Create multiplication table """
     primes = find_primes(num)
     table = []
     header = '\t{}'.format('\t'.join(map(str, primes)))
